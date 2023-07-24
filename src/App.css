@@ -394,3 +394,77 @@ h2 {
 }
 
 /* Sign Up end */
+
+/* Shop start */
+
+.banner-shop {
+  background: url("./assets/imgs/shopBanner.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 30vh;
+  background-position: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.shop-products .card {
+  border-radius: 20px;
+  transition: 0.5s ease;
+  max-width: 265px;
+  padding: 12px 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.shop-products .card h6 {
+  height: 30px;
+}
+
+.shop-products .card:hover {
+  box-shadow: 10px 10px 20px #00000014;
+}
+
+.shop-products .card img {
+  border-radius: 20px;
+  max-width: 100%;
+  height: 240px;
+}
+
+.shop-products .card span {
+  text-transform: lowercase;
+  color: #cca27e;
+  font-size: 0.7rem;
+}
+
+.shop-products .card p {
+  color: #00a97f;
+  font-size: 0.875rem;
+}
+
+.shop-products .card a p:hover {
+  opacity: 0.5;
+}
+
+.shop-products .card button {
+  background: #354d61;
+  color: #fff;
+  padding: 12px 10px;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #cbd6cf;
+}
+
+.pagination .page-item {
+  padding: 0 8px;
+}
+
+.paginate .page-link {
+  font-size: 18px;
+  padding: 0 8px;
+  color: #cca27e;
+  transition: 0.5s ease;
+}
+
+/* Shop end */
