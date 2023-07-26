@@ -1,13 +1,18 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {BiPhoneCall} from 'react-icons/bi'
 import { HiOutlineMail } from 'react-icons/hi'
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/imgs/react.svg'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 import { VscAccount } from 'react-icons/vsc'
+import { useSelector } from 'react-redux';
 
 function header() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation()
+
+    const totalItems = useSelector(state => state.items.total)
+
     return (
         <>
         <header className="header-top-strip p-2 shadow-sm">
@@ -65,7 +70,8 @@ function header() {
                         <Link to={'login'} className='mx-md-2 d-flex'>  <VscAccount className='fs-md-3 fs-2 mx-2 mx-md-2'/>
                             <p>Account</p>
                         </Link>
-                        <Link to={'cart'} className='mx-md-2 d-flex'> <AiOutlineShoppingCart className='fs-md-3 fs-2 mx-2 mx-md-2'/>
+                        <Link to={'cart'} className='position-relative mx-md-2 d-flex'> <AiOutlineShoppingCart className='fs-md-3 fs-2 mx-2 mx-md-2'/>
+                            {totalItems > 0 && <p className='text-center totalItems'>{totalItems}</p>}
                             <p>Cart</p>
                         </Link>
                 </div>

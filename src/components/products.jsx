@@ -1,9 +1,22 @@
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Link } from "react-router-dom";
 import { PRODUCTS, PRODUCTS1 } from "./product";
 import ReactStars from 'react-stars'
+import { useDispatch, useSelector } from "react-redux";
+import { increaseItem, addItem } from "../redux/itemsSlice";
 
 function products() {
-    const products = [...PRODUCTS, ...PRODUCTS1];
+    const page = useSelector((state) => state.page.presentPage)
+    const dispatch = useDispatch();
+    const ids = useSelector(state => state.items.ids)
+
+    const products = page === 1 ? [...PRODUCTS] : [...PRODUCTS1];
+
+    const handleAddItem = (id) => {
+        dispatch(increaseItem())
+        dispatch(addItem(id))
+    }
 
     return (<>
         {products.map(product => (
@@ -19,12 +32,14 @@ function products() {
                     size={24}
                     color2={'#EA9D5A'} 
                 />
-                <p className="price">{product.price}<span className="mx-md-2"><strike>{product.price*2}</strike></span></p>
+                <p className="price">{product.price}$<span className="mx-md-2">&nbsp;<strike>{product.price*2}$</strike></span></p>
                 <Link to={'detail'} className="text-center">
                     <p className="text-info fs-6">View details</p>
                 </Link>
                 <div className="text-center my-3">
-                    <button className="button">Add To Cart</button>
+                    <button onClick={() => {handleAddItem(product.id)}} className="button">
+                        Add To Cart{ ids[product.id] && <span>&nbsp;({ids[product.id]})</span>
+                    }</button>
                 </div>
             </div>
         </div>
