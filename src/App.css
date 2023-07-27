@@ -482,3 +482,31 @@ h2 {
 }
 
 /* Shop end */
+
+/* Cart start */
+
+.empty {
+  align-items: center;
+  justify-content: center;
+  background-color: #dfece4;
+  color: #00a97f;
+  min-height: 300px;
+}
+
+.cart {
+  background-color: #dfece4;
+}
+
+.cart-item {
+  background-color: white;
+}
+/* */
+
+/*  */
+
+.cart-item img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+/* Cart end */

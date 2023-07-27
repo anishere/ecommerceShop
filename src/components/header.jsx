@@ -10,8 +10,10 @@ import { useSelector } from 'react-redux';
 function header() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation()
-
-    const totalItems = useSelector(state => state.items.total)
+    const ids = useSelector(state => state.items.ids)
+    const values = Object.values(ids);
+    console.log(ids)
+    const totalItems = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
     return (
         <>
@@ -35,7 +37,7 @@ function header() {
         </header>
         <nav className="header-upper navbar navbar-expand-lg bg-body-tertiary sticky-top">
             <div className="container-fluid container-xxl">
-                <Link className="navbar-brand mx-auto" href="#"><img src={logo} alt=""  className='img-fluid logo ms-md-5'/></Link>
+                <Link className="navbar-brand mx-auto" to={'/'}><img src={logo} alt=""  className='img-fluid logo ms-md-5'/></Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

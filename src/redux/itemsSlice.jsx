@@ -10,20 +10,25 @@ export const itemsSlice = createSlice({
   initialState,
   reducers: {
     increaseItem: (state) => {
-        state.total++
+      state.total++
     },
     addItem: (state, action) => {
-        const productId = action.payload;
-        if (state.ids[productId]) {
-            state.ids[productId] += 1;
-        } else {
-            state.ids[productId] = 1;
-        }
+      const productId = action.payload;
+      if (state.ids[productId]) {
+          state.ids[productId] += 1;
+      } else {
+          state.ids[productId] = 1;
+      }
+    },
+    editQuantity: (state, action) => { 
+      const id = action.payload.id
+      const data = action.payload.data
+      state.ids[id] = data
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increaseItem, addItem } = itemsSlice.actions
+export const { increaseItem, addItem, editQuantity } = itemsSlice.actions
 
 export default itemsSlice.reducer
