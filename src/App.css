@@ -499,14 +499,88 @@ h2 {
 
 .cart-item {
   background-color: white;
+  border-radius: 0.375rem;
+  border: 1px solid rgb(0 0 0 / 18%);
 }
-/* */
-
-/*  */
 
 .cart-item img {
   max-width: 150px;
   max-height: 150px;
+  border-radius: 0.375rem;
+}
+
+.cart-item-detail p {
+  color: #999;
+  font-size: 0.75rem;
+}
+
+.cart-item-detail p b {
+  color: #00aca8;
+}
+
+.cart-item-edit button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.cart-item-edit button:hover {
+  background-color: transparent;
+  border: 1px solid #2b3d4c;
+  color: #2b3d4c;
+}
+
+.cart-item-edit .delete-button {
+  font-size: 1rem;
+  padding: 12px 24px;
+  background-color: #2b3d4c;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.cart-item-edit input {
+  width: 10%;
+  border: none;
+  border-radius: 0.375rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.cart-item .input-group .form-control {
+  font-size: 0.85rem;
+  width: 100%;
+}
+
+.clearCart button {
+  background-color: transparent;
+  border: none;
+  color: #535bf2;
+  padding: 0;
+  transition: 0.5s ease;
+}
+
+.clearCart button:hover {
+  color: red;
+}
+
+.cart-end a {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 12px 24px;
+  background-color: #2b3d4c;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.cart-end a:hover {
+  background-color: transparent;
+  border: 1px solid #2b3d4c;
+  color: #2b3d4c;
 }
 
 /* Cart end */

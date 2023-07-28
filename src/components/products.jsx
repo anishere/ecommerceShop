@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { PRODUCTS, PRODUCTS1 } from "./product";
 import ReactStars from 'react-stars'
 import { useDispatch, useSelector } from "react-redux";
-import { increaseItem, addItem } from "../redux/itemsSlice";
+import { addItem } from "../redux/itemsSlice";
 
 function products() {
     const page = useSelector((state) => state.page.presentPage)
@@ -14,7 +14,6 @@ function products() {
     const products = page === 1 ? [...PRODUCTS] : [...PRODUCTS1];
 
     const handleAddItem = (id) => {
-        dispatch(increaseItem())
         dispatch(addItem(id))
     }
 

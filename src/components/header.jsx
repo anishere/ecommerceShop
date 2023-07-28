@@ -12,7 +12,6 @@ function header() {
     const location = useLocation()
     const ids = useSelector(state => state.items.ids)
     const values = Object.values(ids);
-    console.log(ids)
     const totalItems = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
     return (
