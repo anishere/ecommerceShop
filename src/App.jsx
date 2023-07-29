@@ -9,6 +9,8 @@ import Contact from './pages/contact'
 import Login from './pages/login'
 import Cart from './pages/cart'
 import Wishlist from './pages/wishlist'
+import Detail from './pages/detail'
+import ScrollToTop from './components/scrollToTop'
 
 // deploy
 
@@ -42,10 +44,12 @@ function App() {
   return (
     <> 
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />}/>
             <Route path='shop' element={<Shop />}/>
+            <Route path='detail' element={<Detail/>}/>
             <Route path='blog' element={<Blog />}/>
             <Route path='about' element={<About />}/>
             <Route path='contact' element={<Contact />}/>

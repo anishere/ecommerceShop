@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { PRODUCTS, PRODUCTS1 } from "./product";
 import ReactStars from 'react-stars'
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../redux/itemsSlice";
+import { addItem, selectProduct } from "../redux/itemsSlice";
 
 function products() {
     const page = useSelector((state) => state.page.presentPage)
@@ -15,6 +15,10 @@ function products() {
 
     const handleAddItem = (id) => {
         dispatch(addItem(id))
+    }
+
+    const handleViewDetail = (id) => {
+        dispatch(selectProduct(id))
     }
 
     return (<>
@@ -32,7 +36,7 @@ function products() {
                     color2={'#EA9D5A'} 
                 />
                 <p className="price">{product.price}$<span className="mx-md-2">&nbsp;<strike>{product.price*2}$</strike></span></p>
-                <Link to={'detail'} className="text-center">
+                <Link onClick={() => handleViewDetail(product.id)} to={'../detail'} className="text-center">
                     <p className="text-info fs-6">View details</p>
                 </Link>
                 <div className="text-center my-3">

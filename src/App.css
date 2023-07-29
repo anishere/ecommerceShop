@@ -584,3 +584,44 @@ h2 {
 }
 
 /* Cart end */
+
+/* Detail start */
+
+.detail {
+  margin: 100px 0;
+}
+
+.detail .detail-text p {
+  font-size: 0.75rem;
+  max-width: 80%;
+  margin: inherit;
+}
+
+.detail .other img {
+  max-width: 95px;
+}
+
+.detail-edit input {
+  width: 40%;
+}
+
+.detail-text .button-link {
+  width: auto;
+}
+
+.other div {
+  margin: auto;
+  width: 70%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.detail .other h5 {
+  color: #00a97f;
+}
+
+.detail .other span {
+  font-size: 0.75rem;
+}
+
+/* Detail end */

@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   ids: {},
+  product: null,
 }
 
 export const itemsSlice = createSlice({
@@ -31,11 +32,14 @@ export const itemsSlice = createSlice({
     },
     clearIds: (state) => {
       Object.keys(state.ids).forEach((key) => delete state.ids[key]);
+    },
+    selectProduct: (state, action) => {
+      state.product = action.payload
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { addItem, reduceItem, editQuantity, deleteItem, clearIds } = itemsSlice.actions
+export const { addItem, reduceItem, editQuantity, deleteItem, clearIds, selectProduct} = itemsSlice.actions
 
 export default itemsSlice.reducer
