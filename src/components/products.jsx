@@ -37,11 +37,12 @@ function products() {
                 />
                 <p className="price">{product.price}$<span className="mx-md-2">&nbsp;<strike>{product.price*2}$</strike></span></p>
                 <Link onClick={() => handleViewDetail(product.id)} to={'../detail'} className="text-center">
-                    <p className="text-info fs-6">View details</p>
+                    <p className="text-info fs-6"
+                    >View details</p>
                 </Link>
                 <div className="text-center my-3">
                     <button onClick={() => {handleAddItem(product.id)}} className="button">
-                        Add To Cart{ ids[product.id] && <span>&nbsp;({ids[product.id]})</span>
+                        Add To Cart{ ids[product.id] > 0 && <span>&nbsp;({ids[product.id]})</span>
                     }</button>
                 </div>
             </div>
