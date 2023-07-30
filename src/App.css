@@ -653,3 +653,38 @@ h2 {
 }
 
 /* Blog end */
+
+/* About start */
+
+.banner-about {
+  background: url("./assets/imgs/banneeAbout.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.about-whoAreWe img {
+  border-radius: 0.375rem;
+}
+
+.about-whoAreWe p {
+  font-size: 0.75rem;
+  width: 80%;
+}
+
+.about-video video {
+  border-radius: 20px;
+}
+
+.about-customer p {
+  font-size: 0.75rem;
+}
+
+.about-marquee img {
+  width: 5rem;
+}
+
+.about-marquee p {
+  font-size: 0.75rem;
+}
+
+/* About end */
