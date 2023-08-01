@@ -23,10 +23,10 @@ function payment() {
     }
 
     return (<>
-        <section className="payment p-5">
+        <section className="payment p-md-5 p-2">
             <div className="container-xxl">
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-6 mb-4 mb-md-0">
                         <h1 className="fs-3 mb-3">Payment Method</h1>
                         <div className="accordion" id="accordionExample">
                             <div className="accordion-item">
@@ -95,7 +95,7 @@ function payment() {
                                 <input type="code" className="form-control" placeholder="" aria-label="zip code" aria-describedby="basic-addon1"/>
                             </form>
                         </div>
-                        <div className='col-3 mt-3'>
+                        <div className='col-md-4 my-3'>
                             <button onClick={() => handlePayment()} className='button-link col-4 w-100'>Proceed to Pay</button>
                         </div>
                     </div>
