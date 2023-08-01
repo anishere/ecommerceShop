@@ -10,8 +10,8 @@ import { useSelector } from 'react-redux';
 function header() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation()
-    const ids = useSelector(state => state.items.ids)
-    const values = Object.values(ids);
+    const ids = useSelector(state => state.items.ids) //Obj
+    const values = Object.values(ids); //Lay tat gia tri tu obj ids value[]
     const totalItems = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 
     return (

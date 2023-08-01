@@ -18,9 +18,6 @@ function cart() {
     const totalItems = values.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
     //
 
-    //
-        // Object.keys(ids).forEach((key) => ids[key].price * );
-    // 
     const dispatch = useDispatch()
 
     const handleEditQuantity = (e, id) => {
@@ -44,7 +41,7 @@ function cart() {
                 <div className="container-xxl">
                     <div className="row">
                     {products.filter(product => 
-                        keyIds.includes(`${product.id}`) && ids[product.id] > 0)
+                        keyIds.includes(`${product.id}`) && ids[product.id] > 0) //trong keyIds la cac string
                         .map(product => {
                             const totalPriceItem = product.price * ids[product.id]
                             totalPriceItems += totalPriceItem
@@ -81,7 +78,7 @@ function cart() {
                         <div className="cart-end col-md-11 mx-auto d-md-flex justify-content-between">
                             <div className="my-3">
                                 <Link to={'../shop'}>Continue Shopping</Link>
-                                <Link className="mx-4">Pay</Link>
+                                <Link to={'../payment'} className="mx-4">Pay</Link>
                             </div>
                             <div>
                                 <h4>Total</h4>

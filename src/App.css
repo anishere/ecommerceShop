@@ -782,3 +782,40 @@ h2 {
 }
 
 /* Login end */
+
+/* Payment start */
+
+.payment {
+  background-color: #e8f2ec;
+}
+
+.payment img {
+  width: 8rem;
+}
+
+.accordion-button::after {
+  content: none;
+}
+
+.payment input {
+  font-size: 0.8rem;
+  height: 50px;
+}
+
+.payment p {
+  font-size: 0.75rem;
+}
+
+.payment .double-input form {
+  width: 48%;
+}
+
+.payment button:hover {
+  background-color: #d3d4d5;
+}
+
+.accordion-button:focus {
+  border-color: none;
+}
+
+/* Payment end */

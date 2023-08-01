@@ -35,7 +35,7 @@ export const itemsSlice = createSlice({
     },
     selectProduct: (state, action) => {
       state.product = action.payload
-    }
+    },
   },
 })
 
