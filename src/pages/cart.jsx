@@ -58,7 +58,7 @@ function cart() {
                                     <p>Product Price: <b>${(product.price * ids[product.id]).toFixed(2)}</b></p>
                                     <p>Product Number: <b>{product.id}</b></p>
                                 </div>
-                                <div className="cart-item-edit d-md-flex justify-content-between px-md-3 my-4 text-center">
+                                <div className="cart-item-edit d-flex justify-content-between px-md-3 my-4 text-md-center">
                                     <div className="my-auto">
                                         <button onClick={() => handleIncrease(product.id)}>+</button>
                                         <input className="mx-4 fs-5 text-danger" type="text" value={ids[product.id]} onChange={(e) => handleEditQuantity(e, product.id)} />
@@ -76,12 +76,12 @@ function cart() {
                         <div className="clearCart col-md-11 mx-auto my-3 d-md-flex justify-content-end">
                             <button onClick={() => handleClearCart()}>Clear Cart</button>
                         </div>
-                        <hr className="col-md-11 mx-auto" />
+                        <hr className="col-11 mx-auto" />
 
                         <div className="cart-end col-md-11 mx-auto d-md-flex justify-content-between">
-                            <div className="my-md-3">
+                            <div className="my-3">
                                 <Link to={'../shop'}>Continue Shopping</Link>
-                                <Link className="mx-md-4">Pay</Link>
+                                <Link className="mx-4">Pay</Link>
                             </div>
                             <div>
                                 <h4>Total</h4>

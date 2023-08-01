@@ -76,7 +76,7 @@ function home() {
                                     <h6 className="card-title">Hot Deals</h6>
                                     <h5 className="card-title">Buy One get One free.</h5>
                                     <p className="card-text mb-4"><small className="text-body-secondary">The latest best collection in our closet <br /> Feel Cute with our outfits</small></p>
-                                    <button>Learn more</button>
+                                    <Link to={'blog'} className="text-white">Learn more</Link>
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ function home() {
                                     <h6 className="card-title">Hot Deals</h6>
                                     <h5 className="card-title">Buy One get One free.</h5>
                                     <p className="card-text mb-4"><small className="text-body-secondary">The latest best collection in our closet <br /> Feel Cute with our outfits</small></p>
-                                    <button>Learn more</button>
+                                    <Link to={'blog'} className="text-white">Learn more</Link>
                                 </div>
                             </div>
                         </div>

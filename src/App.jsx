@@ -11,6 +11,7 @@ import Cart from './pages/cart'
 import Wishlist from './pages/wishlist'
 import Detail from './pages/detail'
 import ScrollToTop from './components/scrollToTop'
+import ForgotPassword from './pages/forgotPassword'
 
 // deploy
 
@@ -56,6 +57,7 @@ function App() {
             <Route path='wishlist' element={<Wishlist />}/>
             <Route path='login' element={<Login />}/>
             <Route path='cart' element={<Cart />}/>
+            <Route path='forgot' element={<ForgotPassword/>} />
           </Route>
         </Routes>
       </BrowserRouter>

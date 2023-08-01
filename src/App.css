@@ -180,7 +180,7 @@ h2 {
 
 .footer .footer-title {
   border-bottom: 2px solid #cca27e;
-  width: 35%;
+  width: 40%;
 }
 
 /* Footer end */
@@ -261,7 +261,7 @@ h2 {
   margin: 80px 0;
 }
 
-.deals button {
+.deals a {
   color: #fff;
   background-color: rgb(234 157 90);
   border: 1px solid transparent;
@@ -271,7 +271,7 @@ h2 {
   border-radius: 10px;
 }
 
-.deals button:hover {
+.deals a:hover {
   background: transparent;
   color: #ff6000;
   border: 1px solid rgb(234 157 90);
@@ -479,6 +479,10 @@ h2 {
   padding: 0 8px;
   color: #cca27e;
   transition: 0.5s ease;
+}
+
+.paginate .page-link span {
+  font-size: 1.125rem;
 }
 
 /* Shop end */
@@ -735,3 +739,46 @@ h2 {
 }
 
 /* Contact end */
+
+/* Login start */
+
+.login {
+  background-color: #dfece4;
+}
+
+.login .login-detail {
+  background-color: #fff;
+}
+
+.login h4 {
+  color: #00a97f;
+}
+
+.login .login-detail p,
+.login .login-detail span {
+  font-size: 0.75rem;
+}
+
+.login .login-detail label {
+  font-size: 0.875rem;
+}
+
+.login .login-detail input {
+  font-size: 0.75rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.login .login-detail a {
+  font-size: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.login .login-detail a:hover {
+  color: #ff6000;
+}
+
+.login .login-detail button {
+  width: 100%;
+}
+
+/* Login end */
