@@ -34,8 +34,8 @@ function login() {
                         </form>
                         {register === false && <Link to={'../forgot'}>Forgot password?</Link>}
                         <div className="mt-3 d-flex justify-content-between">
-                            <span>{register ? 'Dont have an account ?' : 'Have an account'}</span> 
-                            <Link onClick={() => handleToggle()}>{register ? 'Sign up' : 'Login'}</Link>
+                            <span>{register ? 'Have an account' : 'Dont have an account ?'}</span> 
+                            <Link onClick={() => handleToggle()}>{register ? 'Login' : 'Sign Up'}</Link>
                         </div>
                         <button className="button-link mt-3">{register ? 'Sign up' : 'Login'}</button>
                     </div>
